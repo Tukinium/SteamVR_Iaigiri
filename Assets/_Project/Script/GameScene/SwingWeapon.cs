@@ -56,6 +56,8 @@ public class SwingWeapon : MonoBehaviour
         // 切断効果の音を再生する
         this.GetComponent<AudioSource>().Play();
 
+        other.GetComponent<AudioSource>().Play();
+
         // ターゲットに力を加えて飛ばす
         Vector3 force = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
         other.GetComponent<Rigidbody>().AddForce(force);
