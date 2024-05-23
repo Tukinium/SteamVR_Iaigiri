@@ -7,6 +7,7 @@ public class UIFadeOut : MonoBehaviour
     private float alpha = 1.0f; // アルファ値
     private bool isReversePlayback = false; // 逆再生フラグ
     [SerializeField] private float alphaDelete = 0.01f; // アルファ値の変化量
+    [SerializeField] private GameObject UIObject;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class UIFadeOut : MonoBehaviour
                 }
             }
 
-            Renderer renderer = GetComponent<Renderer>(); // Rendererコンポーネントを取得
+            Renderer renderer = UIObject.GetComponent<Renderer>(); // Rendererコンポーネントを取得
             Material material = renderer.material; // マテリアルを取得
             newTint.a = alpha; // 新しいアルファ値を設定
             material.SetColor("_Color", newTint); // マテリアルの色を更新
@@ -60,7 +61,7 @@ public class UIFadeOut : MonoBehaviour
     public void SetAlpha(float _alpha)
     {
         alpha = _alpha; // アルファ値を設定
-        Renderer renderer = GetComponent<Renderer>(); // Rendererコンポーネントを取得
+        Renderer renderer = UIObject.GetComponent<Renderer>(); // Rendererコンポーネントを取得
         Material material = renderer.material; // マテリアルを取得
         newTint.a = alpha; // 新しいアルファ値を設定
         material.SetColor("_Color", newTint); // マテリアルの色を更新

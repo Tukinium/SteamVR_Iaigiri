@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5085952746104705560}
   - component: {fileID: 17917857647397464}
   - component: {fileID: 3834845569203040663}
-  - component: {fileID: 5571147933338797375}
   m_Layer: 0
   m_Name: PullTrigerUIPlane
   m_TagString: Untagged
@@ -107,19 +106,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5571147933338797375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2794599006295709239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdbd6903f78ae7745893e7903afe77c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alphaDelete: 0.005
 --- !u!1 &5151415834692672623
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2893650118274792926}
   - component: {fileID: 2834061547669677527}
+  - component: {fileID: 7669865461509079370}
   m_Layer: 0
   m_Name: PullTrigerPanel
   m_TagString: Untagged
@@ -167,3 +154,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 0}
   distance: 3
+--- !u!114 &7669865461509079370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151415834692672623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbd6903f78ae7745893e7903afe77c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaDelete: 0.005
+  UIObject: {fileID: 2794599006295709239}
