@@ -10,6 +10,8 @@ public class GameSceneManager : BaseSceneManager
 {
     [SerializeField] private AudioManager BGM1;
     [SerializeField] private AudioManager BGM2;
+    [SerializeField] private AudioManager EndGameSound;
+    [SerializeField] private AudioManager ClickAudio;
     [SerializeField] private SteamVR_Action_Boolean handMainTrigger;
     //出現するオブジェクト
     [SerializeField][Tooltip("出現するオブジェクト")] GameObject[] targetObjects;
@@ -122,6 +124,7 @@ public class GameSceneManager : BaseSceneManager
         {
             if (Utility.IsAnyActionPressed(manager.handMainTrigger))
             {
+                manager.ClickAudio.GetComponentInParent<AudioSource>().Play();
                 manager.ChangeState(new GrabWeapon_State());
             }
         }
@@ -260,6 +263,7 @@ public class GameSceneManager : BaseSceneManager
             {
                 manager.BGM2.NormalOut();
                 manager.ChangeState(new Result_State());
+                manager.EndGameSound.GetComponentInParent<AudioSource>().Play();
             }
             else
             {

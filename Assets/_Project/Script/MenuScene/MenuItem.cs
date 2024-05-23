@@ -27,6 +27,10 @@ public class MenuItem : MonoBehaviour
 
         if (sceneAsset != null)
         {
+            if(sceneAsset ==  "Exit")
+            {
+                Application.Quit();
+            }
             SteamVR_LoadLevel.Begin(sceneAsset); // w’è‚µ‚½ƒV[ƒ“‚É‘JˆÚ
         }
         else
